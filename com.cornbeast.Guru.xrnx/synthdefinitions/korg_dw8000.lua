@@ -40,7 +40,7 @@ local group_osc2 = Group {
     name = "Octave 2",
     number = 7,
     items = {"16","8","4"},
-    item_values = {00,01,10}
+    item_values = {0,1,2}
   },
   Parameter {
     id = "waveform2",
@@ -60,7 +60,7 @@ local group_osc2 = Group {
     name = "Interval",
     number = 10,
     items = {"1","-3","3","4","5"},
-    item_values = {000,001,002,003,004},
+    item_values = {0,1,2,3,4},
   },
   Parameter {
     id = "detune",
@@ -89,7 +89,7 @@ local group_other = Group {
     name = "Assign",
     number = 13,
     items = {"Poly1","Poly2","Unison1","Unison2"},
-    item_values = {00,01,10,11},
+    item_values = {0,1,2,3},
   },
 }
 local group_aftertouch = Group {
@@ -122,14 +122,14 @@ local group_osc1 = Group {
     name = "Octave 1",
     number = 0,
     items = {"16","8","4"},
-    item_values = {00,01,10}
+    item_values = {0,1,2}
   },
   Parameter {
     id = "waveform1", 
     name = "Waveform 1",
     number = 1,
     items = {"1 Triangle","2 Square","3 Acoustic Piano","4 Electric Piano","5 Electric Piano Hard","6 Clavinet","7 Organ","8 Brass","9 Saxophone","10 Violin","11 Acoustic Guitar","12 Distorted Guitar","13 Electric Bass","14 Digital Bass","15 Bell","16 Sine"},
-    item_values = {00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16},
+    item_values = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16},
   },
   Parameter {
     id = "level1",
@@ -142,7 +142,7 @@ local group_osc1 = Group {
     name = "Bend Select",
     number = 3,
     items = {"Off","Osc1","Osc2","Both"},
-    item_values = {00,01,10,11},
+    item_values = {0,1,2,3},
   },
   Parameter {
     id = "Bend_mode",
@@ -183,7 +183,7 @@ local group_vcf = Group {
     name = "KBD Track",
     number = 17,
     items = {"0","1/4","1/2","1"},
-    item_values = {00,01,10,11},
+    item_values = {0,1,2,3},
   },
   Parameter {
     id = "polarity",
@@ -334,7 +334,7 @@ return SynthDefinition {
   author = "Daniel",
   beta = true,
   Section {
-    sysex_message_template = {0xF0, 0x42, 0x31, 0x03, 0x41, "nn", "vv", 0xF7},
+    sysex_message_template = {0xF0, 0x42, 0x30, 0x03, 0x41, "nn", "vv", 0xF7},
     group_osc1,
     group_osc2,
     group_aftertouch,
